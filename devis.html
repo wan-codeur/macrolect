@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macrolect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-white text-black shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="images/logo2.png" alt="Logo Macrolect" class="h-10">
+        <span class="text-2xl font-bold text-orange-500">Macrolect</span>
+      </div>
+
+      <!-- Bouton menu mobile -->
+      <button id="menu-btn" class="md:hidden text-black text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Menu desktop -->
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="index.html" class="flex items-center space-x-2 hover:text-orange-500 transition">
+          <i class="fas fa-house"></i> <span>Accueil</span>
+        </a>
+        <a href="index.html?&amp;#services" class="flex items-center space-x-2 hover:text-orange-500 transition">
+          <i class="fas fa-tools"></i> <span>Services</span>
+        </a>
+        <a href="devis.html" class="flex items-center space-x-2 hover:text-orange-500 transition">
+          <i class="fas fa-file-invoice"></i> <span>Demander un devis</span>
+        </a>
+        <a href="vente.html" class="flex items-center space-x-2 hover:text-orange-500 transition">
+          <i class="fas fa-store"></i> <span>Vente</span>
+        </a>
+        <a href="#contact" class="flex items-center space-x-2 hover:text-orange-500 transition">
+          <i class="fas fa-envelope"></i> <span>Contact</span>
+        </a>
+      </div>
+
+      <!-- Bouton Connexion -->
+      <div class="hidden md:block" id="userSection">
+        <a href="login.html"
+          class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg shadow-md transition flex items-center space-x-2">
+          <i class="fas fa-user"></i>
+          <span>Connexion</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Menu mobile (caché par défaut) -->
+    <div id="menu"
+      class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col space-y-4 px-6 py-4">
+      <a href="index.html" class="flex items-center space-x-2 hover:text-orange-500 transition">
+        <i class="fas fa-house"></i> <span>Accueil</span>
+      </a>
+      <a href="index.html?&amp;#services" class="flex items-center space-x-2 hover:text-orange-500 transition">
+        <i class="fas fa-tools"></i> <span>Services</span>
+      </a>
+      <a href="devis.html" class="flex items-center space-x-2 hover:text-orange-500 transition">
+        <i class="fas fa-file-invoice"></i> <span>Demander un devis</span>
+      </a>
+      <a href="vente.html" class="flex items-center space-x-2 hover:text-orange-500 transition">
+        <i class="fas fa-store"></i> <span>Vente</span>
+      </a>
+      <a href="#contact" class="flex items-center space-x-2 hover:text-orange-500 transition">
+        <i class="fas fa-envelope"></i> <span>Contact</span>
+      </a>
+      <a href="login.html"
+        class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg shadow-md transition flex items-center space-x-2">
+        <i class="fas fa-user"></i>
+        <span>Connexion</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Pour ne pas que le contenu passe derrière la navbar -->
+  <div class="h-20"></div>
+
+  <!-- Bannière -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Demandez votre devis personnalisé</h1>
+      <p>Choisissez une catégorie et recevez une estimation rapide pour vos installations.</p>
+    </div>
+  </section>
+
+  <!-- Section cartes -->
+  <section class="categories">
+    <div class="card">
+      <i class="fas fa-bolt"></i>
+      <h3>Électricité</h3>
+      <p>Câbles, disjoncteurs, tableaux électriques et autres équipements.</p>
+      <a href="#" class="btn" onclick="demanderDevis('Électricité')">Demander un devis</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-snowflake"></i>
+      <h3>Climatisation</h3>
+      <p>Climatiseurs, ventilateurs industriels et systèmes de refroidissement.</p>
+      <a href="#" class="btn" onclick="demanderDevis('Climatisation')">Demander un devis</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-solar-panel"></i>
+      <h3>Solaire</h3>
+      <p>Panneaux solaires, onduleurs et kits solaires complets.</p>
+      <a href="#" class="btn" onclick="demanderDevis('Solaire')">Demander un devis</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-water"></i>
+      <h3>Pompes</h3>
+      <p>Pompes à eau et accessoires.</p>
+      <a href="#" class="btn" onclick="demanderDevis('Pompe')">Demander un devis</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-cogs"></i>
+      <h3>Groupes électrogènes</h3>
+      <p>Groupes électrogènes essence et diesel pour toutes puissances.</p>
+      <a href="#" class="btn" onclick="demanderDevis('Pompe')">Demander un devis</a>
+    </div>
+  </section>
+  <script src="js/utils.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+
+  <!-- ================== FOOTER ================== -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Logo + Description -->
+      <div class="footer-section about">
+        <h2 class="logo"><img src="images/logo2.png" alt="Logo Macrolect" class="h-10">Macrolect</h2>
+        <p>
+          Spécialiste en électricité, climatisation, maintenance et énergie solaire.
+          Nous apportons des solutions modernes et durables à vos besoins.
+        </p>
+      </div>
+
+      <!-- Liens rapides -->
+      <div class="footer-section links">
+        <h3>Liens rapides</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#services">Nos Services</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div id="contact" class="footer-section contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Bobo-Dioulasso, Burkina Faso</p>
+        <p><i class="fas fa-phone"></i> +226 75 99 74 08</p>
+        <p><i class="fas fa-phone"></i> +226 63 60 60 22</p>
+        <p><i class="fas fa-envelope"></i> macrolect@gmail.com</p>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="footer-section social">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Macrolect - Tous droits réservés</p>
+    </div>
+  </footer>
+</body>
+
+</html>

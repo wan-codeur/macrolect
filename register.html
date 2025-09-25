@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - Macrolect</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="register-container">
+    <div class="text-center mb-6">
+      <img src="images/logo.png" alt="Logo Macrolect" class="h-16 mx-auto mb-2">
+      <h1 class="text-2xl font-bold text-orange-500">Inscription</h1>
+      <p class="text-gray-500">Créez votre compte Macrolect</p>
+    </div>
+
+    <form id="registerForm" class="flex flex-col gap-4">
+      <input name="name" type="text" placeholder="Nom complet" required class="input-field">
+      <input name="email" type="email" placeholder="Email" required class="input-field">
+      <input name="phone" type="tel" placeholder="Numéro de téléphone" required class="input-field">
+      <input name="password" type="password" placeholder="Mot de passe" required class="input-field">
+      <button type="submit" class="btn-primary">S'inscrire</button>
+    </form>
+
+    <p class="mt-4 text-center text-gray-500">
+      Déjà un compte ? 
+      <a href="/login.html" class="text-orange-500 font-semibold hover:underline">Connectez-vous</a>
+    </p>
+  </div>
+</body>
+</html>
+
+<script src="js/register.js"></script>
