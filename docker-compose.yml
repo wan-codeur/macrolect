@@ -26,7 +26,7 @@ services:
       MYSQL_PASSWORD: Oussen64
     volumes:
       - db_data:/var/lib/mysql
-      - ./dll:/docker-entrypoint-initdb.d
+      - ./ddl:/docker-entrypoint-initdb.d
 
 volumes:
   db_data:
