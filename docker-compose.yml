@@ -1,0 +1,32 @@
+services:
+  macrolect:
+    image: wan57/macrolect:1.0.0  
+    container_name: macrolect
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=wan
+      - DB_PASSWORD=Oussen64
+      - DB_NAME=macrolect
+      - MAIL_USER=abdelwahidnacro@gmail.com
+      - SESSION_SECRET=uneCleSecreteLongueEtRandom
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: macrolect-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Oussen64
+      MYSQL_DATABASE: macrolect
+      MYSQL_USER: wan
+      MYSQL_PASSWORD: Oussen64
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./dll:/docker-entrypoint-initdb.d
+
+volumes:
+  db_data:
