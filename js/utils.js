@@ -237,3 +237,22 @@ async function passerCommande() {
     showNotification("Erreur réseau ❌", "error");
   }
 }
+
+let currentIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("opacity-100", i === index);
+      slide.classList.toggle("opacity-0", i !== index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  // Initialisation
+  showSlide(currentIndex);
+  setInterval(nextSlide, 4000); // toutes les 4 secondes

@@ -91,18 +91,54 @@
 
   <main class="p-5 space-y-16">
 
-    <!-- Hero Section -->
+    <!-- Hero Section avec Diaporama -->
     <section class="relative h-96 md:h-[500px] lg:h-[600px] rounded-2xl shadow-lg overflow-hidden">
-      <img src="images/logo.png" alt="Hero Macrolect" class="w-full h-full object-contain object-center bg-no-repeat">
+      <!-- Slideshow -->
+      <div class="absolute inset-0 w-full h-full">
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo1.png" alt="Hero Image 1" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo2.jpeg" alt="Hero Image 2" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo3.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo4.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo21.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo22.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo27.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo6.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo5.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <img src="images/diapo28.jpeg" alt="Hero Image 3" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Overlay Texte -->
       <div
         class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center text-white p-6">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">Bienvenue sur Macrolect</h1>
         <p class="mt-4 text-lg md:text-xl">Spécialiste en électricité, solaire, climatisation et maintenance</p>
         <a href="#services"
-          class="mt-6 px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-full font-semibold transition">Découvrir nos
-          services</a>
+          class="mt-6 px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-full font-semibold transition">
+          Découvrir nos services
+        </a>
       </div>
     </section>
+
 
 
     <!-- Services Section -->
