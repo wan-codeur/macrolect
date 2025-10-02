@@ -71,10 +71,10 @@ app.post('/api/auth/register', async (req, res) => {
 
     // Créer la session
     req.session.userId = result.insertId;
-    req.session.userName = name;
+    req.session.userName = result.name;
 
     // Répondre une seule fois
-    res.json({ success: true, userId: result.insertId, name });
+    res.json({ success: true, userId: result.insertId, name: result.name });
     
   } catch (err) {
     console.error('Erreur register:', err);
