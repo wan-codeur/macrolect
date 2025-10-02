@@ -64,6 +64,11 @@ app.post('/api/auth/register', async (req, res) => {
       [name, email, phone || null, hash]
     );
 
+    // set session
+    req.session.userId = user.id;
+    req.session.userName = user.name;
+    res.json({ success: true, userId: user.id, name: user.name });
+    
     req.session.userId = result.insertId;
     req.session.userName = name;
     res.json({ success: true, userId: result.insertId });
