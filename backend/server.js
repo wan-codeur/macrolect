@@ -22,6 +22,8 @@ app.use(cookieParser());
 // session store config
 const sessionStore = new MySQLStore({}, pool.promise ? pool.promise() : pool);
 
+app.set('trust proxy', 1);
+
 // configure session middleware
 app.use(session({
   key: 'macrolect_sid',
