@@ -49,34 +49,39 @@ function ensureAuthenticated(req, res, next) {
 app.post('/api/auth/register', async (req, res) => {
   try {
     const { name, email, phone, password } = req.body;
-    if (!name || !email || !password) 
+    if (!name || !email || !password) {
       return res.status(400).json({ error: 'Champs manquants' });
+    }
 
-    // vérifier si email existe
+    // Vérifier si email existe déjà
     const [rows] = await pool.query('SELECT id FROM users WHERE email = ?', [email]);
-    if (rows.length) return res.status(400).json({ error: 'Email déjà utilisé' });
+    if (rows.length > 0) {
+      return res.status(400).json({ error: 'Email déjà utilisé' });
+    }
 
+    // Hasher le mot de passe
     const saltRounds = 10;
     const hash = await bcrypt.hash(password, saltRounds);
 
+    // Insérer dans la DB
     const [result] = await pool.query(
       'INSERT INTO users (name, email, phone, password_hash) VALUES (?, ?, ?, ?)',
       [name, email, phone || null, hash]
     );
 
-    // set session
-    req.session.userId = user.id;
-    req.session.userName = user.name;
-    res.json({ success: true, userId: user.id, name: user.name });
-    
+    // Créer la session
     req.session.userId = result.insertId;
     req.session.userName = name;
-    res.json({ success: true, userId: result.insertId });
+
+    // Répondre une seule fois
+    res.json({ success: true, userId: result.insertId, name });
+    
   } catch (err) {
-    console.error(err);
+    console.error('Erreur register:', err);
     res.status(500).json({ error: 'Erreur serveur' });
   }
 });
+
 
 // Connexion
 app.post('/api/auth/login', async (req, res) => {
