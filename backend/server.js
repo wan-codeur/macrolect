@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const pool = require('./db');
-const cors = require("cors");
 
 
 const app = express();
