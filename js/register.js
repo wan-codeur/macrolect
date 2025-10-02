@@ -19,7 +19,10 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
     if (json.success) {
       // stocker le nom de l'utilisateur dans localStorage
-      localStorage.setItem("userName", body.name);
+      localStorage.setItem("username", body.name);
+
+      // On sauvegarde le nom d’utilisateur pour la navbar
+      localStorage.setItem("username", json.name || fd.get('email'));
 
       // notification moderne
       showNotification("Inscription réussie ! Bienvenue " + body.name, "success");
