@@ -12,6 +12,7 @@ services:
       - DB_NAME=macrolect
       - MAIL_USER=abdelwahidnacro@gmail.com
       - SESSION_SECRET=uneCleSecreteLongueEtRandom
+      - MAIL_PASS=osfwochhixzivuby
     depends_on:
       - db
 
