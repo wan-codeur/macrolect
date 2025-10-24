@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vente - Produits Solaires</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <%- include('header') %>
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Produits Solaires</h1>
+      <p>Exploitez l’énergie du soleil avec nos solutions solaires fiables et durables</p>
+    </header>
+
+    <!-- SECTION PRODUITS SOLAIRES -->
+    <main class="vente-container">
+
+      <!-- Panneaux solaires -->
+      <div class="card">
+        <i class="fas fa-solar-panel"></i>
+        <h3>Panneaux Solaires</h3>
+        <p>Panneaux monocristallins et polycristallins pour installations domestiques et industrielles.</p>
+        <a href="/panneau" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Onduleurs -->
+      <div class="card">
+        <i class="fas fa-plug"></i>
+        <h3>Onduleurs Solaires</h3>
+        <p>Convertisseurs performants pour transformer l’énergie solaire en courant utilisable.</p>
+        <a href="/onduleur" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Batteries -->
+      <div class="card">
+        <i class="fas fa-car-battery"></i>
+        <h3>Batteries Solaires</h3>
+        <p>Batteries GEL, AGM et lithium pour stocker efficacement l’énergie solaire.</p>
+        <a href="/batterie" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Régulateurs -->
+      <div class="card">
+        <i class="fas fa-sliders-h"></i>
+        <h3>Régulateurs de Charge</h3>
+        <p>MPPT et PWM pour une gestion optimale et sécurisée de vos systèmes solaires.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Kits solaires -->
+      <div class="card">
+        <i class="fas fa-box"></i>
+        <h3>Kits Solaires</h3>
+        <p>Solutions complètes prêtes à installer : panneaux, régulateur, batterie et accessoires.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Accessoires -->
+      <div class="card">
+        <i class="fas fa-tools"></i>
+        <h3>Accessoires</h3>
+        <p>Câbles solaires, connecteurs MC4, structures de montage et dispositifs de protection.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+    </main>
+
+    <%- include('footer') %>
+      <script src="js/utils.js" defer></script>
+      <script src="js/navbar.js" defer></script>
+</body>
+
+</html>

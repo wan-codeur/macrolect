@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vente - Électricité</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <%- include('header') %>
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Électricité</h1>
+      <p>Découvrez notre gamme complète de matériel électrique fiable et durable</p>
+    </header>
+
+    <!-- SECTION PRODUITS ÉLECTRICITÉ -->
+    <main class="vente-container">
+
+      <!-- Câbles -->
+      <div class="card">
+        <i class="fas fa-plug"></i>
+        <h3>Câbles Électriques</h3>
+        <p>Large choix de câbles de différentes sections et utilisations : domestiques, industriels, souterrains.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Disjoncteurs -->
+      <div class="card">
+        <i class="fas fa-bolt"></i>
+        <h3>Disjoncteurs</h3>
+        <p>Disjoncteurs monophasés, triphasés, différentiels pour sécuriser vos installations.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Tableaux électriques -->
+      <div class="card">
+        <i class="fas fa-th-large"></i>
+        <h3>Tableaux Électriques</h3>
+        <p>Tableaux de distribution, coffrets modulaires et accessoires pour installations complètes.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Tubes et gaines -->
+      <div class="card">
+        <i class="fas fa-draw-polygon"></i>
+        <h3>Tubes & Gaines</h3>
+        <p>Tubes PVC, gaines annelées et rigides pour la protection et le passage des câbles.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Prises & interrupteurs -->
+      <div class="card">
+        <i class="fas fa-toggle-on"></i>
+        <h3>Prises & Interrupteurs</h3>
+        <p>Équipements de qualité pour un usage domestique ou professionnel.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+      <!-- Accessoires électriques -->
+      <div class="card">
+        <i class="fas fa-toolbox"></i>
+        <h3>Accessoires</h3>
+        <p>Dominos, connecteurs, goulottes, colliers de serrage et tout le nécessaire de fixation.</p>
+        <a href="#" class="btn">Voir plus</a>
+      </div>
+
+    </main>
+    <%- include('footer') %>
+</body>
+
+</html>

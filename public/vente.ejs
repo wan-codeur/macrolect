@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vente - Macrolect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <%- include('header') %>
+    <!-- Pour ne pas que le contenu passe derrière la navbar -->
+    <div class="h-20"></div>
+
+    <!-- HEADER SIMPLE -->
+    <header class="header">
+      <h1>Nos </h1>
+      <p>Découvrez nos équipements modernes et fiables</p>
+    </header>
+
+    <!-- SECTION  -->
+    <main class="vente-container">
+      <div class="card">
+        <i class="fas fa-bolt"></i>
+        <h3>Électricité</h3>
+        <p>Câbles, disjoncteurs, tableaux électriques et autres équipements.</p>
+        <a href="/electricite" class="btn">Voir plus</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-snowflake"></i>
+        <h3>Climatisation</h3>
+        <p>Climatiseurs, ventilateurs industriels et systèmes de refroidissement.</p>
+        <a href="/climatisation" class="btn">Voir plus</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-solar-panel"></i>
+        <h3>Solaire</h3>
+        <p>Panneaux solaires, onduleurs et kits solaires complets.</p>
+        <a href="/solaire" class="btn">Voir plus</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-water"></i>
+        <h3>Pompes</h3>
+        <p>Pompes à eau et accessoires.</p>
+        <a href="/pompe" class="btn">Voir plus</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-cogs"></i>
+        <h3>Groupes électrogènes</h3>
+        <p>Groupes électrogènes essence et diesel pour toutes puissances.</p>
+        <a href="/groupe" class="btn">Voir plus</a>
+      </div>
+
+      <!-- <div class="card">
+      <i class="fas fa-tools"></i>
+      <h3>Maintenance</h3>
+      <p>Outils, kits de réparation et accessoires techniques.</p>
+      <a href="#" class="btn">Voir plus</a>
+    </div> -->
+    </main>
+    <script src="js/utils.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <!-- ================== FOOTER ================== -->
+    <%- include('footer') %>
+</body>
+
+</html>

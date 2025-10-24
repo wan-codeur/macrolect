@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macrolect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+
+  <%- include('header') %>
+
+    <!-- Pour ne pas que le contenu passe derrière la navbar -->
+    <div class="h-20"></div>
+
+    <!-- Bannière -->
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Demandez votre devis personnalisé</h1>
+        <p>Choisissez une catégorie et recevez une estimation rapide pour vos installations.</p>
+      </div>
+    </section>
+
+    <!-- Section cartes -->
+    <section class="categories">
+      <div class="card">
+        <i class="fas fa-bolt"></i>
+        <h3>Électricité</h3>
+        <p>Câbles, disjoncteurs, tableaux électriques et autres équipements.</p>
+        <a href="#" class="btn" onclick="demanderDevis('Électricité')">Demander un devis</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-snowflake"></i>
+        <h3>Climatisation</h3>
+        <p>Climatiseurs, ventilateurs industriels et systèmes de refroidissement.</p>
+        <a href="#" class="btn" onclick="demanderDevis('Climatisation')">Demander un devis</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-solar-panel"></i>
+        <h3>Solaire</h3>
+        <p>Panneaux solaires, onduleurs et kits solaires complets.</p>
+        <a href="#" class="btn" onclick="demanderDevis('Solaire')">Demander un devis</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-water"></i>
+        <h3>Pompes</h3>
+        <p>Pompes à eau et accessoires.</p>
+        <a href="#" class="btn" onclick="demanderDevis('Pompe')">Demander un devis</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-cogs"></i>
+        <h3>Groupes électrogènes</h3>
+        <p>Groupes électrogènes essence et diesel pour toutes puissances.</p>
+        <a href="#" class="btn" onclick="demanderDevis('Pompe')">Demander un devis</a>
+      </div>
+    </section>
+    <script src="js/utils.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+
+    <%- include('footer') %>
+</body>
+
+</html>

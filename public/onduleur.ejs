@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macrolect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-gray-50">
+
+    <%- include('header') %>
+
+        <!-- Pour ne pas que le contenu passe derrière la navbar -->
+        <div class="h-20"></div>
+
+
+
+        <div class="vente-container">
+            <div class="card">
+                <h3>Convertisseur hybride 3,5KW/24V-110A</h3>
+                <p><strong>Prix Flash :</strong> 195 000 CFA</p>
+
+                <button class="btn" onclick="ajouterAuPanier('Convertisseur hybride 3,5KW')">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <h3>Convertisseur hybride 5,5KW/48V-110A</h3>
+                <p><strong>Prix Flash :</strong> 240 000 CFA</p>
+                <p><strong>Stock :</strong> 5 pièces</p>
+                <button class="btn" onclick="ajouterAuPanier('Convertisseur hybride 5,5KW')">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <h3>Onduleur Deye 6kVA</h3>
+                <p><strong>Prix Flash :</strong> 825 000 CFA</p>
+
+                <button class="btn" onclick="ajouterAuPanier('Onduleur Deye 6kVA')">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <h3>Onduleur Growatt 5000 (SPF 5000 ES)</h3>
+                <p><strong>Prix Flash :</strong> 375 000 CFA</p>
+
+                <button class="btn" onclick="ajouterAuPanier('Onduleur Growatt 5000 ES')">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <!-- Bouton flottant (caché par défaut, affiché via JS) -->
+        <button id="btn-commande" class="floating-btn" style="display: none;">
+            Passer ma commande
+        </button>
+        <%- include('footer') %>
+            <script src="../js/utils.js" defer></script>
+            <script src="../js/navbar.js" defer></script>
+</body>
+
+</html>

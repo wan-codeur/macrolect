@@ -9,9 +9,14 @@ const cookieParser = require('cookie-parser');
 const pool = require('./db');
 
 
+
 const app = express();
+// Définir EJS comme moteur de template
+app.set('view engine', 'ejs');
 const path = require('path');
-app.use(express.static(path.join(__dirname, '..')));
+app.set('views', path.join(__dirname, '..', 'public'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
 const port = process.env.PORT || 3000;
 
 // parse bodies
@@ -23,6 +28,8 @@ app.use(cookieParser());
 const sessionStore = new MySQLStore({}, pool.promise ? pool.promise() : pool);
 
 app.set('trust proxy', 1);
+
+
 
 // configure session middleware
 app.use(session({
@@ -287,11 +294,19 @@ Message : Merci de contacter ce client dans les 48h qui suivent sa commande.
   }
 });
 
-
-// endpoint test pour vérifier si serveur OK
 app.get('/', (req, res) => {
-  res.send('Macrolect backend is running');
+  res.render('index');
 });
+
+app.get('/:page', (req, res, next) => {
+  const page = req.params.page;
+  const allowedPages = ['index', 'batterie', 'climatisation', 'devis', 'electricite', 'groupe', 'login', 'onduleur', 'panneau', 'pompe', 'register', 'solaire', 'vente', 'produits']; // à ajuster
+  if (allowedPages.includes(page)) {
+    return res.render(page);
+  }
+  next(); // sinon passe à la suite (404 ou autre)
+});
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
