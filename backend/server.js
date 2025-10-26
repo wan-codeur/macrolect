@@ -200,7 +200,7 @@ app.post('/api/devis', ensureAuthenticated, async (req, res) => {
     // Préparer l'email
     const mailOptions = {
       from: process.env.MAIL_USER,
-      to: "wantechastuces@gmail.com",
+      to: "contact@macrolect.com",
       subject: `Demande de devis - ${categorie}`,
       text: `Bonjour,\n\nL'utilisateur ${user.name} a demandé un devis pour : ${categorie}.\n\nSes coordonnées :\n- Email : ${user.email}\n- Téléphone : ${user.phone}\n\nMessage : Merci de bien vouloir le contacter pour plus de détails.\n\nCordialement,\nVotre site web Macrolect`
     };
@@ -276,7 +276,7 @@ Message : Merci de contacter ce client dans les 48h qui suivent sa commande.
 
     const mailOptions = {
       from: process.env.MAIL_USER,
-      to: "wantechastuces@gmail.com",
+      to: "contact@macrolect.com",
       subject: "Nouvelle commande client",
       text: contenuCommande
     };
